@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kimiad Golf &amp; Leisure — Moreleta Park, Pretoria</title>
+    <meta name="description" content="Golf course, driving range, walking trails, restaurants and activities in Moreleta Park, Pretoria. Book your tee time online at Kimiad Golf &amp; Leisure.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="container nav__inner">
+            <a href="#" class="nav__logo">Kimiad Golf &amp; Leisure</a>
+            <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav__links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#times">Opening Times</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#booking" class="btn btn--nav">Book a Tee Time</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero" id="hero">
+        <div class="hero__slides" id="heroSlides">
+            <div class="hero__slide active" style="background-image: url('https://assets.hole19golf.com/course_images/images/000/006/398/standard/c87557a765b75a8728dcfa0b5e06f6ae76b3e44f.jpeg?1479744354');"></div>
+            <div class="hero__slide" style="background-image: url('https://assets.hole19golf.com/course_images/images/000/006/431/original/62d79f0596fb9098d0f82b532de20a47614ae6be.jpeg?1479752031');"></div>
+            <div class="hero__slide" style="background-image: url('https://assets.hole19golf.com/course_images/images/000/006/432/standard/cbaf951f652e0a5c84ad6234257ed9677f4d9154.jpeg?1479752598');"></div>
+        </div>
+        <div class="hero__overlay"></div>
+        <div class="container hero__content">
+            <h1 class="hero__title">Kimiad Golf &amp; Leisure</h1>
+            <p class="hero__subtitle">Golf, nature &amp; leisure in the heart of Moreleta Park, Pretoria</p>
+            <a href="#booking" class="btn btn--primary btn--lg">Book Your Tee Time</a>
+        </div>
+    </header>
+
+    <!-- About -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Welcome to Kimiad</h2>
+                <p class="section__subtitle">
+                    Discover a picturesque golf destination set amongst rolling terrain and free-roaming animals.
+                    With an 18-hole course, executive course, par 3 course, driving range, walking trails, and
+                    on-site restaurants, Kimiad offers something for golfers and nature lovers of every level.
+                </p>
+            </div>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature__icon">⛳</div>
+                    <h3 class="feature__title">Multiple Courses</h3>
+                    <p class="feature__text">18-hole course, 12-hole executive course, and a 6-hole par 3 — something for every skill level.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature__icon">🏌️</div>
+                    <h3 class="feature__title">Driving Range</h3>
+                    <p class="feature__text">Warm up or work on your swing at our fully equipped driving range and chip &amp; putt area.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature__icon">🌿</div>
+                    <h3 class="feature__title">Trails &amp; Nature</h3>
+                    <p class="feature__text">Walking and hiking trails through beautiful scenery with free-roaming animals throughout the estate.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature__icon">🍽️</div>
+                    <h3 class="feature__title">Restaurants &amp; Bar</h3>
+                    <p class="feature__text">Relax after your round at one of our on-site restaurants with great food, drinks, and views.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section section--alt" id="pricing">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Green Fees</h2>
+                <p class="section__subtitle">Affordable rates for an exceptional golfing experience. No tee time required — just pitch up and play.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <div class="price-card__header">
+                        <h3>Par 3 Course</h3>
+                        <p class="price-card__label">6 Holes · Par 18</p>
+                    </div>
+                    <div class="price-card__price">
+                        <span class="price-card__currency">R</span>
+                        <span class="price-card__amount">90</span>
+                        <span class="price-card__period">from</span>
+                    </div>
+                    <ul class="price-card__features">
+                        <li>6 holes of fun, relaxed golf</li>
+                        <li>Perfect for beginners</li>
+                        <li>No tee time required</li>
+                        <li>Weekday R90 · Weekend R140</li>
+                    </ul>
+                    <a href="#booking" class="btn btn--outline">Book Now</a>
+                </div>
+                <div class="price-card price-card--featured">
+                    <div class="price-card__badge">Most Popular</div>
+                    <div class="price-card__header">
+                        <h3>Executive Course</h3>
+                        <p class="price-card__label">12 Holes</p>
+                    </div>
+                    <div class="price-card__price">
+                        <span class="price-card__currency">R</span>
+                        <span class="price-card__amount">110</span>
+                        <span class="price-card__period">from</span>
+                    </div>
+                    <ul class="price-card__features">
+                        <li>12 challenging holes</li>
+                        <li>Scenic rolling terrain</li>
+                        <li>Great for all skill levels</li>
+                        <li>Weekday R110 · Weekend R220</li>
+                    </ul>
+                    <a href="#booking" class="btn btn--primary">Book Now</a>
+                </div>
+                <div class="price-card">
+                    <div class="price-card__header">
+                        <h3>Driving Range</h3>
+                        <p class="price-card__label">Practice &amp; Warm-Up</p>
+                    </div>
+                    <div class="price-card__price">
+                        <span class="price-card__currency">R</span>
+                        <span class="price-card__amount">50</span>
+                        <span class="price-card__period">from</span>
+                    </div>
+                    <ul class="price-card__features">
+                        <li>Bucket of range balls</li>
+                        <li>Chip &amp; putt area included</li>
+                        <li>Open daily</li>
+                        <!-- TODO: Confirm driving range price -->
+                    </ul>
+                    <a href="#booking" class="btn btn--outline">Visit</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Opening Times -->
+    <section class="section" id="times">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Opening Times</h2>
+                <p class="section__subtitle">Plan your visit with our current opening hours.</p>
+            </div>
+            <div class="times-table-wrap">
+                <table class="times-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Opening</th>
+                            <th>Last Tee Time</th>
+                            <th>Closing</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Monday</td>
+                            <td>7:00 AM</td>
+                            <td>4:00 PM</td>
+                            <td>6:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday</td>
+                            <td>7:00 AM</td>
+                            <td>4:00 PM</td>
+                            <td>6:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>7:00 AM</td>
+                            <td>4:00 PM</td>
+                            <td>6:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Thursday</td>
+                            <td>7:00 AM</td>
+                            <td>4:00 PM</td>
+                            <td>6:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td>7:00 AM</td>
+                            <td>4:00 PM</td>
+                            <td>6:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday</td>
+                            <td>7:00 AM</td>
+                            <td>4:00 PM</td>
+                            <td>6:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Sunday</td>
+                            <td>7:00 AM</td>
+                            <td>4:00 PM</td>
+                            <td>6:00 PM</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="times-note">
+                <strong>Note:</strong> Times may vary seasonally. Please check before visiting or call us on
+                <a href="tel:+27129972240">012 997 2240</a>.
+            </p>
+        </div>
+    </section>
+
+    <!-- Booking -->
+    <section class="section section--alt" id="booking">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Book a Tee Time</h2>
+                <p class="section__subtitle">Reserve your spot on the course in just a few clicks.</p>
+            </div>
+            <form class="booking-form" id="bookingForm" novalidate>
+                <div class="booking-form__grid">
+                    <div class="form-group">
+                        <label for="bookName">Full Name</label>
+                        <input type="text" id="bookName" name="name" required placeholder="e.g. Johan van der Merwe"
+                               autocomplete="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="bookEmail">Email Address</label>
+                        <input type="email" id="bookEmail" name="email" required placeholder="johan@example.co.za"
+                               autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="bookPhone">Phone Number</label>
+                        <input type="tel" id="bookPhone" name="phone" required placeholder="012 345 6789"
+                               autocomplete="tel">
+                    </div>
+                    <div class="form-group">
+                        <label for="bookCourse">Course</label>
+                        <select id="bookCourse" name="course" required>
+                            <option value="">Select a course</option>
+                            <option value="par3">Par 3 Course (6 holes)</option>
+                            <option value="executive">Executive Course (12 holes)</option>
+                            <option value="18hole">18-Hole Course</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="bookDate">Preferred Date</label>
+                        <input type="date" id="bookDate" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bookTime">Preferred Tee Time</label>
+                        <select id="bookTime" name="time" required>
+                            <option value="">Select a time</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="bookPlayers">Number of Players</label>
+                        <select id="bookPlayers" name="players" required>
+                            <option value="">Select</option>
+                            <option value="1">1 Player</option>
+                            <option value="2">2 Players</option>
+                            <option value="3">3 Players</option>
+                            <option value="4">4 Players</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="bookNotes">Additional Notes</label>
+                    <textarea id="bookNotes" name="notes" rows="3"
+                              placeholder="Any special requirements or requests..."></textarea>
+                </div>
+                <button type="submit" class="btn btn--primary btn--lg btn--full">
+                    Confirm Booking
+                </button>
+            </form>
+            <div class="booking-confirmation" id="bookingConfirmation" hidden>
+                <div class="booking-confirmation__icon">✓</div>
+                <h3>Booking Request Received!</h3>
+                <p>Thank you for your booking. We'll confirm your tee time via email shortly.</p>
+                <button class="btn btn--outline" id="bookAnother">Book Another</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location -->
+    <section class="section" id="location">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Find Us</h2>
+                <p class="section__subtitle">We'd love to see you at the course.</p>
+            </div>
+            <div class="location-grid">
+                <div class="location-info">
+                    <div class="location-detail">
+                        <h3>📍 Address</h3>
+                        <p>Wekker Road, Moreleta Park<br>Pretoria, 0044<br>Gauteng, South Africa</p>
+                    </div>
+                    <div class="location-detail">
+                        <h3>📞 Phone</h3>
+                        <p>
+                            <a href="tel:+27129972240">012 997 2240</a><br>
+                            <a href="tel:+27129977332">012 997 7332</a>
+                        </p>
+                    </div>
+                    <div class="location-detail">
+                        <h3>📱 Social</h3>
+                        <p>
+                            <a href="https://www.facebook.com/kimiadgolfcourse" target="_blank" rel="noopener noreferrer">Facebook</a><br>
+                            <a href="https://www.instagram.com/kimiadgolfcourse/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="location-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.5!2d28.2926!3d-25.8190!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e956612a1fc43f7%3A0x2e4f89c5b6a26f9b!2sKimiad%20Golf%20Course%20and%20Driving%20Range!5e0!3m2!1sen!2sza!4v1"
+                        width="100%"
+                        height="400"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Kimiad Golf &amp; Leisure location map">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <h3>Kimiad Golf &amp; Leisure</h3>
+                    <p>Golf, nature &amp; leisure in Moreleta Park, Pretoria.</p>
+                </div>
+                <div class="footer__links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#times">Opening Times</a></li>
+                        <li><a href="#booking">Book a Tee Time</a></li>
+                        <li><a href="#location">Location</a></li>
+                    </ul>
+                </div>
+                <div class="footer__contact">
+                    <h4>Contact</h4>
+                    <p>Wekker Road, Moreleta Park<br>Pretoria, 0044</p>
+                    <p><a href="tel:+27129972240">012 997 2240</a></p>
+                    <p><a href="tel:+27129977332">012 997 7332</a></p>
+                    <p>
+                        <a href="https://www.facebook.com/kimiadgolfcourse" target="_blank" rel="noopener noreferrer">Facebook</a> ·
+                        <a href="https://www.instagram.com/kimiadgolfcourse/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; <span id="currentYear"></span> Kimiad Golf &amp; Leisure. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
