@@ -142,24 +142,39 @@
                 notes: document.getElementById('bookNotes').value.trim()
             };
 
-            // Send booking to API
-            fetch('/api/bookings', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData)
-            })
-            .then(function (res) { return res.json(); })
-            .then(function (data) {
-                if (data.error) {
-                    alert(data.error);
-                    return;
-                }
-                bookingForm.hidden = true;
-                bookingConfirmation.hidden = false;
-            })
-            .catch(function () {
-                alert('Could not complete booking. Please try again.');
+            // Build WhatsApp confirmation message
+            var courseLabel = document.getElementById('bookCourse');
+            var courseName = courseLabel.options[courseLabel.selectedIndex].text;
+            var dateObj = new Date(formData.date + 'T00:00:00');
+            var dateStr = dateObj.toLocaleDateString('en-ZA', {
+                weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
             });
+
+            var timeVal = formData.time;
+            var hh = parseInt(timeVal.split(':')[0], 10);
+            var mm = timeVal.split(':')[1];
+            var ampm = hh >= 12 ? 'PM' : 'AM';
+            var displayHour = hh > 12 ? hh - 12 : hh;
+            var timeStr = displayHour + ':' + mm + ' ' + ampm;
+
+            var msg = 'Hi Kimiad Golf & Leisure!\n\n'
+                + 'I would like to book a tee time:\n\n'
+                + 'Name: ' + formData.name + '\n'
+                + 'Course: ' + courseName + '\n'
+                + 'Date: ' + dateStr + '\n'
+                + 'Time: ' + timeStr + '\n'
+                + 'Players: ' + formData.players + '\n'
+                + (formData.notes ? 'Notes: ' + formData.notes + '\n' : '')
+                + '\nPlease confirm my booking. Thank you!';
+
+            var waUrl = 'https://wa.me/27815562612?text=' + encodeURIComponent(msg);
+
+            // Store URL for the confirmation button
+            var waBtn = document.getElementById('whatsappConfirm');
+            if (waBtn) waBtn.href = waUrl;
+
+            bookingForm.hidden = true;
+            bookingConfirmation.hidden = false;
         });
     }
 

@@ -795,6 +795,25 @@ ul {
     font-size: 0.8rem;
 }
 
+.btn--whatsapp {
+    background: #25D366;
+    color: #fff;
+    border-color: #25D366;
+}
+
+.btn--whatsapp:hover {
+    background: #1EBE57;
+    border-color: #1EBE57;
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn--whatsapp svg {
+    vertical-align: middle;
+    margin-right: 0.25rem;
+}
+
 /* --- Nav solid (for inner pages without hero) --- */
 .nav--solid {
     position: relative;
