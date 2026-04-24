@@ -66,6 +66,34 @@
         dateInput.setAttribute('min', yyyy + '-' + mm + '-' + dd);
     }
 
+    // --- Auth-aware navigation ---
+    var navAuth = document.getElementById('navAuth');
+    if (navAuth) {
+        fetch('/api/me')
+            .then(function (r) { return r.json(); })
+            .then(function (data) {
+                if (data.user) {
+                    navAuth.innerHTML =
+                        '<a href="/my-bookings" style="margin-right:0.75rem;">My Bookings</a>' +
+                        '<a href="#" id="logoutNav">Log Out</a>';
+                    document.getElementById('logoutNav').addEventListener('click', function (e) {
+                        e.preventDefault();
+                        fetch('/api/logout', { method: 'POST' }).then(function () { location.reload(); });
+                    });
+                    // Auto-fill booking form from profile
+                    var nameField = document.getElementById('bookName');
+                    var emailField = document.getElementById('bookEmail');
+                    if (nameField && !nameField.value) nameField.value = data.user.name || '';
+                    if (emailField && !emailField.value) emailField.value = data.user.email || '';
+                } else {
+                    navAuth.innerHTML = '<a href="/login">Login</a>';
+                }
+            })
+            .catch(function () {
+                navAuth.innerHTML = '<a href="/login">Login</a>';
+            });
+    }
+
     // --- Booking form handling ---
     var bookingForm = document.getElementById('bookingForm');
     var bookingConfirmation = document.getElementById('bookingConfirmation');
@@ -114,17 +142,24 @@
                 notes: document.getElementById('bookNotes').value.trim()
             };
 
-            // TODO: Send formData to your backend API
-            // Example:
-            // fetch('/api/bookings', {
-            //     method: 'POST',
-            //     headers: { 'Content-Type': 'application/json' },
-            //     body: JSON.stringify(formData)
-            // }).then(response => { ... });
-
-            console.log('Booking submitted:', formData);
-            bookingForm.hidden = true;
-            bookingConfirmation.hidden = false;
+            // Send booking to API
+            fetch('/api/bookings', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            })
+            .then(function (res) { return res.json(); })
+            .then(function (data) {
+                if (data.error) {
+                    alert(data.error);
+                    return;
+                }
+                bookingForm.hidden = true;
+                bookingConfirmation.hidden = false;
+            })
+            .catch(function () {
+                alert('Could not complete booking. Please try again.');
+            });
         });
     }
 

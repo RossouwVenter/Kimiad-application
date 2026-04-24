@@ -381,7 +381,7 @@ ul {
 /* --- Pricing --- */
 .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--space-lg);
     align-items: start;
 }
@@ -737,6 +737,158 @@ ul {
     opacity: 0.7;
 }
 
+/* --- Auth Pages --- */
+.auth-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 6rem;
+}
+
+.auth-card {
+    max-width: 440px;
+    margin: 0 auto;
+    background: var(--color-surface);
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    text-align: center;
+}
+
+.auth-form {
+    text-align: left;
+    margin-top: var(--space-md);
+}
+
+.auth-alert {
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-md);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: var(--space-sm);
+}
+
+.auth-alert--error {
+    background: #FEF2F2;
+    color: #DC2626;
+    border: 1px solid #FECACA;
+}
+
+.auth-alert--success {
+    background: #F0FFF4;
+    color: var(--color-success);
+    border: 1px solid #BBF7D0;
+}
+
+.auth-switch {
+    margin-top: var(--space-md);
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+}
+
+.auth-switch a {
+    font-weight: 600;
+}
+
+.btn--sm {
+    padding: 0.4rem 1rem;
+    font-size: 0.8rem;
+}
+
+/* --- Nav solid (for inner pages without hero) --- */
+.nav--solid {
+    position: relative;
+    background: var(--color-surface);
+}
+
+/* --- My Bookings --- */
+.bookings-header {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+}
+
+.bookings-loading,
+.bookings-empty {
+    text-align: center;
+    padding: var(--space-xl);
+    color: var(--color-text-light);
+}
+
+.bookings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--space-md);
+}
+
+.booking-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-md);
+    transition: box-shadow var(--transition);
+}
+
+.booking-card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.booking-card--cancelled {
+    opacity: 0.6;
+}
+
+.booking-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-sm);
+}
+
+.booking-card__course {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--color-primary-dark);
+}
+
+.badge {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.25rem 0.65rem;
+    border-radius: var(--radius-full);
+}
+
+.badge--confirmed {
+    background: #DCFCE7;
+    color: var(--color-success);
+}
+
+.badge--cancelled {
+    background: #FEF2F2;
+    color: #DC2626;
+}
+
+.booking-card__details p {
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+    color: var(--color-text);
+}
+
+.booking-card__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--space-sm);
+    padding-top: var(--space-sm);
+    border-top: 1px solid var(--color-border);
+}
+
+.booking-card__booked {
+    font-size: 0.8rem;
+    color: var(--color-text-light);
+}
+
 /* --- Responsive --- */
 @media (max-width: 768px) {
     .nav__toggle {
@@ -779,7 +931,7 @@ ul {
     }
 
     .pricing-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     .price-card--featured {
@@ -807,5 +959,59 @@ ul {
 @media (max-width: 480px) {
     .features {
         grid-template-columns: 1fr;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Stack the times table into cards on small screens */
+    .times-table thead {
+        display: none;
+    }
+
+    .times-table,
+    .times-table tbody,
+    .times-table tr,
+    .times-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .times-table tbody tr {
+        padding: 0.75rem 1rem;
+        margin-bottom: 0.5rem;
+        border-bottom: none;
+        border-radius: var(--radius-md);
+        border: 1px solid var(--color-border);
+    }
+
+    .times-table td {
+        padding: 0.3rem 0;
+        text-align: right;
+        font-size: 0.9rem;
+    }
+
+    .times-table td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: 600;
+        color: var(--color-primary-dark);
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+    }
+
+    .times-table td:first-child {
+        text-align: left;
+        font-size: 1rem;
+        padding-bottom: 0.4rem;
+        margin-bottom: 0.3rem;
+        border-bottom: 1px solid var(--color-border);
+        color: var(--color-primary-dark);
+    }
+
+    .times-table td:first-child::before {
+        display: none;
     }
 }

@@ -27,6 +27,7 @@
                 <li><a href="#times">Opening Times</a></li>
                 <li><a href="#location">Location</a></li>
                 <li><a href="#booking" class="btn btn--nav">Book a Tee Time</a></li>
+                <li id="navAuth"></li>
             </ul>
         </div>
     </nav>
@@ -108,8 +109,7 @@
                     </ul>
                     <a href="#booking" class="btn btn--outline">Book Now</a>
                 </div>
-                <div class="price-card price-card--featured">
-                    <div class="price-card__badge">Most Popular</div>
+                <div class="price-card">
                     <div class="price-card__header">
                         <h3>Executive Course</h3>
                         <p class="price-card__label">12 Holes</p>
@@ -124,6 +124,27 @@
                         <li>Scenic rolling terrain</li>
                         <li>Great for all skill levels</li>
                         <li>Weekday R110 · Weekend R220</li>
+                    </ul>
+                    <a href="#booking" class="btn btn--outline">Book Now</a>
+                </div>
+                <div class="price-card price-card--featured">
+                    <div class="price-card__badge">Full Round</div>
+                    <div class="price-card__header">
+                        <h3>18 Holes</h3>
+                        <p class="price-card__label">Championship Course</p>
+                    </div>
+                    <div class="price-card__price">
+                        <!-- TODO: Confirm 18-hole prices -->
+                        <span class="price-card__currency">R</span>
+                        <span class="price-card__amount">200</span>
+                        <span class="price-card__period">from</span>
+                    </div>
+                    <ul class="price-card__features">
+                        <li>Full 18-hole round</li>
+                        <li>Challenging championship layout</li>
+                        <li>Stunning views throughout</li>
+                        <li>Use of practice facilities</li>
+                        <li>Weekday R200 · Weekend R350</li>
                     </ul>
                     <a href="#booking" class="btn btn--primary">Book Now</a>
                 </div>
@@ -169,45 +190,45 @@
                     <tbody>
                         <tr>
                             <td>Monday</td>
-                            <td>7:00 AM</td>
-                            <td>4:00 PM</td>
-                            <td>6:00 PM</td>
+                            <td data-label="Opening">7:00 AM</td>
+                            <td data-label="Last Tee">4:00 PM</td>
+                            <td data-label="Closing">6:00 PM</td>
                         </tr>
                         <tr>
                             <td>Tuesday</td>
-                            <td>7:00 AM</td>
-                            <td>4:00 PM</td>
-                            <td>6:00 PM</td>
+                            <td data-label="Opening">7:00 AM</td>
+                            <td data-label="Last Tee">4:00 PM</td>
+                            <td data-label="Closing">6:00 PM</td>
                         </tr>
                         <tr>
                             <td>Wednesday</td>
-                            <td>7:00 AM</td>
-                            <td>4:00 PM</td>
-                            <td>6:00 PM</td>
+                            <td data-label="Opening">7:00 AM</td>
+                            <td data-label="Last Tee">4:00 PM</td>
+                            <td data-label="Closing">6:00 PM</td>
                         </tr>
                         <tr>
                             <td>Thursday</td>
-                            <td>7:00 AM</td>
-                            <td>4:00 PM</td>
-                            <td>6:00 PM</td>
+                            <td data-label="Opening">7:00 AM</td>
+                            <td data-label="Last Tee">4:00 PM</td>
+                            <td data-label="Closing">6:00 PM</td>
                         </tr>
                         <tr>
                             <td>Friday</td>
-                            <td>7:00 AM</td>
-                            <td>4:00 PM</td>
-                            <td>6:00 PM</td>
+                            <td data-label="Opening">7:00 AM</td>
+                            <td data-label="Last Tee">4:00 PM</td>
+                            <td data-label="Closing">6:00 PM</td>
                         </tr>
                         <tr>
                             <td>Saturday</td>
-                            <td>7:00 AM</td>
-                            <td>4:00 PM</td>
-                            <td>6:00 PM</td>
+                            <td data-label="Opening">7:00 AM</td>
+                            <td data-label="Last Tee">4:00 PM</td>
+                            <td data-label="Closing">6:00 PM</td>
                         </tr>
                         <tr>
                             <td>Sunday</td>
-                            <td>7:00 AM</td>
-                            <td>4:00 PM</td>
-                            <td>6:00 PM</td>
+                            <td data-label="Opening">7:00 AM</td>
+                            <td data-label="Last Tee">4:00 PM</td>
+                            <td data-label="Closing">6:00 PM</td>
                         </tr>
                     </tbody>
                 </table>
